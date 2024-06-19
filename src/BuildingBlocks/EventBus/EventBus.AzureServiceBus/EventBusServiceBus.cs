@@ -137,7 +137,7 @@ namespace EventBus.AzureServiceBus
             bool ruleExists;
             try
             {
-                RuleDescription? rule = managementClient.GetRuleAsync(EventBusConfig.DefaultTopicName, eventName, eventName).GetAwaiter().GetResult();
+                RuleDescription? rule = managementClient.GetRuleAsync(EventBusConfig.DefaultTopicName, GetSubName(eventName), eventName).GetAwaiter().GetResult();
                 ruleExists = rule != null;
             }
             catch (MessagingEntityNotFoundException)
