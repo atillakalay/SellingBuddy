@@ -101,6 +101,7 @@ namespace EventBus.UnitTest
                 DefaultTopicName = "SellingBuddyTopicName",
                 EventBusType = EventBusType.RabbitMQ,
                 EventNameSuffix = "IntegrationEvent"
-            }
+            };
+        }
     }
-    }
+}
